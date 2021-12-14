@@ -1,0 +1,168 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+SpotLight {
+	location	0 36329 0
+	radius	100
+}
+DEF Satellite Transform {
+	scale	100 100 100
+	children Transform {
+		translation	-0.0854189 0.0615436 0
+		scale	0.001 0.001 0.001
+		children Group {
+			children [ 
+			    Group {
+				    children DEF _04F287F8 Group {
+					    children []
+				    }
+			    }
+
+			    Group {
+				    children DEF _04F28418 Group {
+					    children []
+				    }
+			    }
+
+			    Group {
+				    children DEF _04F280B8 Group {
+					    children []
+				    }
+			    }
+
+			    Group {
+				    children [ 
+					Group {
+						children [ 
+						    Shape {
+							    appearance	Appearance {
+								    material	DEF _material0 Material {
+									    emissiveColor	0.86 0.86 0
+								    }
+
+							    }
+
+							    geometry	PointSet {
+								    color	Color {
+									    color	1 1 1
+								    }
+
+								    coord	Coordinate {
+									    point	-67 0 0
+								    }
+
+							    }
+
+						    }
+
+						    DEF _1E5C98A8 Group {
+							    children []
+						    }
+
+						    DEF _1E5C9688 Group {
+							    children []
+						    }
+						]
+					}
+
+					Group {
+						children DEF _1BF277D8 Group {
+							children Transform {
+								children Shape {
+									appearance	Appearance {
+										material	Material {
+										}
+
+									}
+
+									geometry	Box {
+										size	150 150 300
+									}
+
+								}
+							}
+						}
+					}
+				    ]
+			    }
+			]
+		}
+	}
+}
+Background {
+	groundAngle	[ 0.9, 1.5, 1.57 ]
+	groundColor	[ 0 0 0,
+			  0.00212499 0.01 0.0022849,
+			  0 0 0,
+			  0 0 0 ]
+	backUrl	"texture/star.jpg"
+	bottomUrl	"texture/star.jpg"
+	frontUrl	"texture/star.jpg"
+	leftUrl	"texture/star.jpg"
+	rightUrl	"texture/star.jpg"
+	topUrl	"texture/star.jpg"
+	skyAngle	[ 0.1, 1.2, 1.57 ]
+	skyColor	[ 0 0 0,
+			  0 0 0,
+			  0 0 0,
+			  0 0 0 ]
+}
+DEF Front Viewpoint {
+	position	0 0 500
+	description	"Front_View"
+}
+DEF Right Viewpoint {
+	orientation	0 1 0  1.5708
+	position	500 0 0
+	description	"Right_View"
+}
+DEF Back Viewpoint {
+	orientation	0 1 0  3.14159
+	position	0 0 -500
+	description	"Back_View"
+}
+DEF Left Viewpoint {
+	orientation	0 -1 0  1.5708
+	position	-500 0 0
+	description	"Right_View"
+}
+DEF Top_View Viewpoint {
+	orientation	1 0 0  1.5708
+	position	0 -500 0
+	description	"Top_View"
+}
+DEF Bottom_View Viewpoint {
+	orientation	-1 0 0  1.5708
+	position	0 500 0
+	description	"Top_View"
+}
+DEF Earth Transform {
+	translation	0 0 0
+	scale	1.5 1.5 1.5
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0.2
+				diffuseColor	0 0 0
+				emissiveColor	1 1 1
+				specularColor	0.45 0.282414 0.308843
+			}
+
+			texture	DEF Marble_Blue ImageTexture {
+				url	"texture/planetearth.jpg"
+				repeatS	FALSE
+				repeatT	FALSE
+			}
+
+		}
+
+		geometry	Sphere {
+			radius	67.31
+		}
+
+	}
+}
